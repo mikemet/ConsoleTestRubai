@@ -1,6 +1,4 @@
-﻿using System.ComponentModel;
-
-string[] arrStrings = File.ReadAllLines("testRubai.csv");
+﻿string[] arrStrings = File.ReadAllLines("testRubai.csv");
 
 Random rnd = new();
 int mIndex = rnd.Next(arrStrings.Length);
