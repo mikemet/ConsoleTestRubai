@@ -1,48 +1,29 @@
 ﻿using System.ComponentModel;
 
-List<string> list = new();
-
-FileStream fileStream = new("testRubai.csv", FileMode.Open);
-StreamReader sr = new(fileStream);
-
-while (!sr.EndOfStream)
-{
-    list.Add(sr.ReadLine());
-}
-
-sr.Close();
-fileStream.Close();
+string[] arrStrings = File.ReadAllLines("testRubai.csv");
 
 Random rnd = new();
-int mIndex = rnd.Next(list.Count);
+int mIndex = rnd.Next(arrStrings.Length);
 
-// TODO elimination of the exception!!
-
-if (mIndex >= list.Count - 3)
+if (mIndex >= arrStrings.Length - 3)
 {
-    mIndex = list.Count - 4;
+    mIndex = arrStrings.Length - 4;
 }
 
 while (mIndex % 4 != 0)
 {
     mIndex++;
 }
-string str = list[mIndex];
-List<string> result = new()
-{
-    str
-};
+
+string str = arrStrings[mIndex];
+Console.WriteLine(str);
 
 for (int i = 0; i < 3; i++)
 {
     mIndex++;
-    result.Add(list[mIndex]);
+    Console.WriteLine(arrStrings[mIndex]);
 }
 
-foreach (var item in result)
-{
-    Console.WriteLine(item);
-}
 
 Console.WriteLine();
 Console.WriteLine("End of programm. Press any key...");
