@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel;
 
-List<string> list = new List<string>();
+List<string> list = new();
 
-FileStream fileStream = new FileStream("testRubai.csv", FileMode.Open);
-StreamReader sr = new StreamReader(fileStream);
+FileStream fileStream = new("testRubai.csv", FileMode.Open);
+StreamReader sr = new(fileStream);
 
 while (!sr.EndOfStream)
 {
@@ -13,7 +13,7 @@ while (!sr.EndOfStream)
 sr.Close();
 fileStream.Close();
 
-Random rnd = new Random();
+Random rnd = new();
 int mIndex = rnd.Next(list.Count);
 
 if (mIndex >= list.Count - 3)
@@ -26,7 +26,7 @@ while (mIndex % 4 != 0)
     mIndex++;
 }
 string str = list[mIndex];
-List<string> result = new List<string>
+List<string> result = new()
 {
     str
 };
