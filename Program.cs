@@ -16,6 +16,8 @@ fileStream.Close();
 Random rnd = new();
 int mIndex = rnd.Next(list.Count);
 
+// TODO elimination of the exception!!
+
 if (mIndex >= list.Count - 3)
 {
     mIndex = list.Count - 4;
