@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="bin\Debug\net7.0\testRubai.csv" />
+    <None Include="bin\Debug\net8.0\testRubai.csv" />
   </ItemGroup>
 
 </Project>
